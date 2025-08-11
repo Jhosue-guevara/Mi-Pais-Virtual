@@ -228,103 +228,114 @@ const MarcoJuridicoSection = () => (
         </div>
       </div>
 
-      {/* Normas y Fuentes del Derecho */}
+      {/* Normas y Fuentes del Derecho con animaciones súper dinámicas */}
       <div className="grid lg:grid-cols-2 gap-12 mb-20">
-        {/* Normas Jurídicas Fundamentales */}
-        <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-3xl p-8 border border-emerald-100">
+        {/* Normas Jurídicas Fundamentales con efectos interactivos */}
+        <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-3xl p-8 border border-emerald-100 hover-lift hover-glow transition-all duration-700 group animate-fade-in-left stagger-1">
           <div className="flex items-center mb-6">
-            <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center mr-4">
-              <FileText className="w-6 h-6 text-white" />
+            <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 animate-float">
+              <FileText className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-300" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900">Normas Jurídicas Fundamentales</h3>
+            <h3 className="text-2xl font-bold text-gray-900 group-hover:text-emerald-700 transition-colors duration-300">Normas Jurídicas Fundamentales</h3>
           </div>
           <div className="space-y-4">
-            <div className="flex items-start">
-              <span className="inline-flex items-center justify-center w-8 h-8 bg-emerald-600 text-white text-sm font-bold rounded-full mr-4 flex-shrink-0">1</span>
+            <div className="flex items-start group-item hover:bg-emerald-100 rounded-lg p-3 transition-all duration-500 hover:translate-x-2 hover:shadow-lg animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+              <span className="inline-flex items-center justify-center w-8 h-8 bg-emerald-600 text-white text-sm font-bold rounded-full mr-4 flex-shrink-0 group-item-hover:scale-125 group-item-hover:animate-bounce transition-all duration-300 animate-pulse-subtle">1</span>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-1">Respeto a la Vida</h4>
-                <p className="text-gray-600 text-sm">Ninguna persona podrá ser privada de su vida o sometida a violencia de forma ilegal.</p>
+                <h4 className="font-semibold text-gray-900 mb-1 group-item-hover:text-emerald-800 group-item-hover:font-bold transition-all duration-300">Respeto a la Vida</h4>
+                <p className="text-gray-600 text-sm group-item-hover:text-gray-800 transition-colors duration-300">Ninguna persona podrá ser privada de su vida o sometida a violencia de forma ilegal.</p>
               </div>
             </div>
-            <div className="flex items-start">
-              <span className="inline-flex items-center justify-center w-8 h-8 bg-emerald-600 text-white text-sm font-bold rounded-full mr-4 flex-shrink-0">2</span>
+            <div className="flex items-start group-item hover:bg-emerald-100 rounded-lg p-3 transition-all duration-500 hover:translate-x-2 hover:shadow-lg animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+              <span className="inline-flex items-center justify-center w-8 h-8 bg-emerald-600 text-white text-sm font-bold rounded-full mr-4 flex-shrink-0 group-item-hover:scale-125 group-item-hover:animate-bounce transition-all duration-300 animate-pulse-subtle" style={{animationDelay: '0.5s'}}>2</span>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-1">Igualdad ante la Ley</h4>
-                <p className="text-gray-600 text-sm">Todos los ciudadanos tienen los mismos derechos y obligaciones, sin distinción.</p>
+                <h4 className="font-semibold text-gray-900 mb-1 group-item-hover:text-emerald-800 group-item-hover:font-bold transition-all duration-300">Igualdad ante la Ley</h4>
+                <p className="text-gray-600 text-sm group-item-hover:text-gray-800 transition-colors duration-300">Todos los ciudadanos tienen los mismos derechos y obligaciones, sin distinción.</p>
               </div>
             </div>
-            <div className="flex items-start">
-              <span className="inline-flex items-center justify-center w-8 h-8 bg-emerald-600 text-white text-sm font-bold rounded-full mr-4 flex-shrink-0">3</span>
+            <div className="flex items-start group-item hover:bg-emerald-100 rounded-lg p-3 transition-all duration-500 hover:translate-x-2 hover:shadow-lg animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+              <span className="inline-flex items-center justify-center w-8 h-8 bg-emerald-600 text-white text-sm font-bold rounded-full mr-4 flex-shrink-0 group-item-hover:scale-125 group-item-hover:animate-bounce transition-all duration-300 animate-pulse-subtle" style={{animationDelay: '1s'}}>3</span>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-1">Protección Ambiental</h4>
-                <p className="text-gray-600 text-sm">El uso de recursos naturales debe ser responsable y sostenible.</p>
+                <h4 className="font-semibold text-gray-900 mb-1 group-item-hover:text-emerald-800 group-item-hover:font-bold transition-all duration-300">Protección Ambiental</h4>
+                <p className="text-gray-600 text-sm group-item-hover:text-gray-800 transition-colors duration-300">El uso de recursos naturales debe ser responsible y sostenible.</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Fuentes del Derecho */}
-        <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-3xl p-8 border border-purple-100">
+        {/* Fuentes del Derecho con efectos súper interactivos */}
+        <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-3xl p-8 border border-purple-100 hover-lift hover-glow transition-all duration-700 group animate-fade-in-right stagger-2">
           <div className="flex items-center mb-6">
-            <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center mr-4">
-              <FileText className="w-6 h-6 text-white" />
+            <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 animate-float" style={{animationDelay: '1s'}}>
+              <FileText className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-300" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900">Fuentes del Derecho</h3>
+            <h3 className="text-2xl font-bold text-gray-900 group-hover:text-purple-700 transition-colors duration-300">Fuentes del Derecho</h3>
           </div>
           <ul className="space-y-3">
-            <li className="flex items-center">
-              <div className="w-3 h-3 bg-purple-600 rounded-full mr-3"></div>
-              <span className="text-gray-700">Constitución de la República de Veridia</span>
+            <li className="flex items-center group-item hover:bg-purple-100 rounded-lg p-2 transition-all duration-300 hover:translate-x-2 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+              <div className="w-3 h-3 bg-purple-600 rounded-full mr-3 group-item-hover:scale-150 group-item-hover:animate-pulse transition-all duration-300 animate-pulse-subtle"></div>
+              <span className="text-gray-700 group-item-hover:text-purple-800 group-item-hover:font-semibold transition-all duration-300">Constitución de la República de Veridia</span>
             </li>
-            <li className="flex items-center">
-              <div className="w-3 h-3 bg-purple-600 rounded-full mr-3"></div>
+            <li className="flex items-center group-item hover:bg-purple-100 rounded-lg p-2 transition-all duration-300 hover:translate-x-2 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+              <div className="w-3 h-3 bg-purple-600 rounded-full mr-3 group-item-hover:scale-150 group-item-hover:animate-pulse transition-all duration-300 animate-pulse-subtle" style={{animationDelay: '0.5s'}}></div>
               <span className="text-gray-700">Leyes aprobadas por la Asamblea Nacional</span>
             </li>
-            <li className="flex items-center">
-              <div className="w-3 h-3 bg-purple-600 rounded-full mr-3"></div>
-              <span className="text-gray-700">Reglamentos emitidos por el Poder Ejecutivo</span>
+            <li className="flex items-center group-item hover:bg-purple-100 rounded-lg p-2 transition-all duration-300 hover:translate-x-2 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+              <div className="w-3 h-3 bg-purple-600 rounded-full mr-3 group-item-hover:scale-150 group-item-hover:animate-pulse transition-all duration-300 animate-pulse-subtle" style={{animationDelay: '1s'}}></div>
+              <span className="text-gray-700 group-item-hover:text-purple-800 group-item-hover:font-semibold transition-all duration-300">Reglamentos emitidos por el Poder Ejecutivo</span>
             </li>
-            <li className="flex items-center">
-              <div className="w-3 h-3 bg-purple-600 rounded-full mr-3"></div>
-              <span className="text-gray-700">Costumbre compatible con la ley</span>
+            <li className="flex items-center group-item hover:bg-purple-100 rounded-lg p-2 transition-all duration-300 hover:translate-x-2 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+              <div className="w-3 h-3 bg-purple-600 rounded-full mr-3 group-item-hover:scale-150 group-item-hover:animate-pulse transition-all duration-300 animate-pulse-subtle" style={{animationDelay: '1.5s'}}></div>
+              <span className="text-gray-700 group-item-hover:text-purple-800 group-item-hover:font-semibold transition-all duration-300">Costumbre compatible con la ley</span>
             </li>
-            <li className="flex items-center">
-              <div className="w-3 h-3 bg-purple-600 rounded-full mr-3"></div>
-              <span className="text-gray-700">Jurisprudencia de la Corte Suprema</span>
+            <li className="flex items-center group-item hover:bg-purple-100 rounded-lg p-2 transition-all duration-300 hover:translate-x-2 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
+              <div className="w-3 h-3 bg-purple-600 rounded-full mr-3 group-item-hover:scale-150 group-item-hover:animate-pulse transition-all duration-300 animate-pulse-subtle" style={{animationDelay: '2s'}}></div>
+              <span className="text-gray-700 group-item-hover:text-purple-800 group-item-hover:font-semibold transition-all duration-300">Jurisprudencia de la Corte Suprema</span>
             </li>
-            <li className="flex items-center">
-              <div className="w-3 h-3 bg-purple-600 rounded-full mr-3"></div>
-              <span className="text-gray-700">Doctrina jurídica de expertos</span>
+            <li className="flex items-center group-item hover:bg-purple-100 rounded-lg p-2 transition-all duration-300 hover:translate-x-2 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
+              <div className="w-3 h-3 bg-purple-600 rounded-full mr-3 group-item-hover:scale-150 group-item-hover:animate-pulse transition-all duration-300 animate-pulse-subtle" style={{animationDelay: '2.5s'}}></div>
+              <span className="text-gray-700 group-item-hover:text-purple-800 group-item-hover:font-semibold transition-all duration-300">Doctrina jurídica de expertos</span>
             </li>
           </ul>
         </div>
       </div>
 
-      {/* Jerarquía Normativa */}
-      <div className="bg-gradient-to-r from-slate-900 to-gray-900 rounded-3xl p-8 lg:p-12 text-white">
-        <div className="text-center mb-12">
-          <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-            <TrendingUp className="w-8 h-8 text-white" />
+      {/* Jerarquía Normativa con animaciones súper dinámicas */}
+      <div className="bg-gradient-to-r from-slate-900 to-gray-900 rounded-3xl p-8 lg:p-12 text-white hover-lift hover-glow animate-fade-in-up stagger-2 relative overflow-hidden">
+        {/* Elementos de fondo animados */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-10 left-20 w-20 h-20 bg-yellow-500 rounded-full animate-float"></div>
+          <div className="absolute bottom-20 right-10 w-16 h-16 bg-orange-500 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
+          <div className="absolute top-1/2 right-1/3 w-12 h-12 bg-red-500 rounded-full animate-float" style={{animationDelay: '4s'}}></div>
+        </div>
+
+        <div className="text-center mb-12 relative z-10">
+          <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6 animate-pulse-glow hover:scale-125 hover:rotate-12 transition-all duration-500 group cursor-pointer">
+            <TrendingUp className="w-8 h-8 text-white group-hover:animate-bounce" />
           </div>
-          <h3 className="text-3xl font-bold mb-4">Jerarquía Normativa</h3>
-          <p className="text-gray-300 max-w-2xl mx-auto">Orden jerárquico de las normas jurídicas en la República de Veridia</p>
+          <h3 className="text-3xl font-bold mb-4 hover:text-yellow-300 transition-colors duration-300 cursor-pointer">Jerarquía Normativa</h3>
+          <p className="text-gray-300 max-w-2xl mx-auto hover:text-white transition-colors duration-300">Orden jerárquico de las normas jurídicas en la República de Veridia</p>
         </div>
         
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto relative z-10">
           <div className="space-y-4">
             {[
-              { num: 1, text: "Constitución", bg: "from-red-500 to-red-600" },
-              { num: 2, text: "Tratados internacionales ratificados", bg: "from-orange-500 to-orange-600" },
-              { num: 3, text: "Leyes nacionales", bg: "from-yellow-500 to-yellow-600" },
-              { num: 4, text: "Reglamentos", bg: "from-green-500 to-green-600" },
-              { num: 5, text: "Ordenanzas municipales", bg: "from-blue-500 to-blue-600" },
-              { num: 6, text: "Costumbre y jurisprudencia", bg: "from-purple-500 to-purple-600" }
+              { num: 1, text: "Constitución", bg: "from-red-500 to-red-600", delay: "0.1s" },
+              { num: 2, text: "Tratados internacionales ratificados", bg: "from-orange-500 to-orange-600", delay: "0.2s" },
+              { num: 3, text: "Leyes nacionales", bg: "from-yellow-500 to-yellow-600", delay: "0.3s" },
+              { num: 4, text: "Reglamentos", bg: "from-green-500 to-green-600", delay: "0.4s" },
+              { num: 5, text: "Ordenanzas municipales", bg: "from-blue-500 to-blue-600", delay: "0.5s" },
+              { num: 6, text: "Costumbre y jurisprudencia", bg: "from-purple-500 to-purple-600", delay: "0.6s" }
             ].map(item => (
-              <div key={item.num} className="flex items-center bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                <div className={`w-12 h-12 bg-gradient-to-br ${item.bg} rounded-xl flex items-center justify-center mr-4 text-white font-bold`}>
+              <div key={item.num} className={`flex items-center bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover-lift hover-glow transition-all duration-500 group cursor-pointer animate-fade-in-left`} style={{animationDelay: item.delay}}>
+                <div className={`w-12 h-12 bg-gradient-to-br ${item.bg} rounded-xl flex items-center justify-center mr-4 text-white font-bold group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 animate-bounce-subtle`}>
                   {item.num}
                 </div>
-                <span className="text-lg font-semibold">{item.text}</span>
+                <span className="text-lg font-semibold group-hover:text-yellow-200 group-hover:scale-105 transition-all duration-300">{item.text}</span>
+                
+                {/* Efectos de ondas al hover */}
+                <div className="absolute -inset-1 rounded-xl border border-white/10 opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"></div>
+                <div className="absolute -inset-2 rounded-xl border border-white/5 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"></div>
               </div>
             ))}
           </div>
