@@ -95,23 +95,22 @@ const ScrollToTop = () => {
 const HeroSection = () => (
   <section id="inicio" className="relative overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-700 to-blue-800 animate-gradient"></div>
-    
-    <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-      <div className="text-center text-white mb-16">
-        <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6 border border-white/20 animate-fade-in-scale stagger-1">
+    <div className="relative z-10 max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 py-10 md:py-16 lg:py-24">
+      <div className="text-center text-white mb-10 md:mb-16">
+        <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 bg-white/10 backdrop-blur-sm rounded-full mb-4 sm:mb-6 border border-white/20 animate-fade-in-scale stagger-1">
           <Award className="w-4 h-4 mr-2 animate-bounce-subtle" />
-          <span className="text-sm font-semibold">Forma de Gobierno: Presidencialismo / República</span>
+          <span className="text-xs sm:text-sm font-semibold">Forma de Gobierno: Presidencialismo / República</span>
         </div>
-        <h1 className="text-5xl lg:text-7xl font-black mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent animate-fade-in-up stagger-2">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-black mb-4 sm:mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent animate-fade-in-up stagger-2">
           REPÚBLICA DE VERIDIA
         </h1>
-        <p className="text-xl lg:text-2xl text-blue-100 font-light max-w-3xl mx-auto leading-relaxed animate-fade-in-up stagger-3">
+        <p className="text-base sm:text-xl lg:text-2xl text-blue-100 font-light max-w-md sm:max-w-2xl md:max-w-3xl mx-auto leading-relaxed animate-fade-in-up stagger-3">
           Una nación moderna comprometida con la justicia, la transparencia y el desarrollo sostenible de sus ciudadanos.
         </p>
       </div>
 
       {/* Datos Principales Destacados con animaciones escalonadas */}
-      <div id="datos-principales" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+      <div id="datos-principales" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10 md:mb-16">
         <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover-lift hover-glow transition-all duration-300 group animate-fade-in-left stagger-1">
           <div className="flex items-center mb-4">
             <div className="w-12 h-12 bg-gradient-to-br from-emerald-400 to-green-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-500 animate-float">
@@ -841,6 +840,14 @@ const Footer = () => (
 
 // Componente principal de la aplicación
 const App = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const handleNavClick = (href: string) => {
+    setMobileMenuOpen(false);
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-gray-900">
       {/* Header súper interactivo con animaciones */}
@@ -862,26 +869,49 @@ const App = () => {
                 <p className="text-sm text-gray-500 font-medium group-hover:text-blue-600 transition-colors duration-300 select-none">Portal Gubernamental Oficial</p>
               </div>
             </div>
-            
+            {/* Menú hamburguesa para móvil */}
+            <div className="lg:hidden flex items-center">
+              <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="p-2 rounded-md text-blue-700 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
+            {/* Navbar desktop */}
             <nav className="hidden lg:flex space-x-8 animate-fade-in-up">
               <div className="relative group">
-                <NavLink href="#inicio">Inicio</NavLink>
-                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-500 group-hover:w-full"></div>
+                <a href="#inicio" onClick={e => {e.preventDefault(); handleNavClick('#inicio')}} className="text-gray-600 hover:text-blue-600 font-semibold transition-colors duration-200 relative group cursor-pointer">Inicio
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
               </div>
               <div className="relative group">
-                <NavLink href="#datos-principales">Datos Principales</NavLink>
-                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-green-600 to-emerald-600 transition-all duration-500 group-hover:w-full"></div>
+                <a href="#datos-principales" onClick={e => {e.preventDefault(); handleNavClick('#datos-principales')}} className="text-gray-600 hover:text-green-600 font-semibold transition-colors duration-200 relative group cursor-pointer">Datos Principales
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
               </div>
               <div className="relative group">
-                <NavLink href="#marco-juridico">Marco Jurídico</NavLink>
-                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-500 group-hover:w-full"></div>
+                <a href="#marco-juridico" onClick={e => {e.preventDefault(); handleNavClick('#marco-juridico')}} className="text-gray-600 hover:text-purple-600 font-semibold transition-colors duration-200 relative group cursor-pointer">Marco Jurídico
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
               </div>
               <div className="relative group">
-                <NavLink href="#gobierno">Gobierno</NavLink>
-                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-orange-600 transition-all duration-500 group-hover:w-full"></div>
+                <a href="#gobierno" onClick={e => {e.preventDefault(); handleNavClick('#gobierno')}} className="text-gray-600 hover:text-red-600 font-semibold transition-colors duration-200 relative group cursor-pointer">Gobierno
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
               </div>
             </nav>
           </div>
+          {/* Menú móvil desplegable */}
+          {mobileMenuOpen && (
+            <div className="lg:hidden animate-fade-in-down bg-white shadow-xl rounded-xl mt-2 p-4 absolute left-0 right-0 z-50">
+              <div className="flex flex-col space-y-4">
+                <a href="#inicio" onClick={e => {e.preventDefault(); handleNavClick('#inicio')}} className="text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-200">Inicio</a>
+                <a href="#datos-principales" onClick={e => {e.preventDefault(); handleNavClick('#datos-principales')}} className="text-gray-700 hover:text-green-600 font-semibold transition-colors duration-200">Datos Principales</a>
+                <a href="#marco-juridico" onClick={e => {e.preventDefault(); handleNavClick('#marco-juridico')}} className="text-gray-700 hover:text-purple-600 font-semibold transition-colors duration-200">Marco Jurídico</a>
+                <a href="#gobierno" onClick={e => {e.preventDefault(); handleNavClick('#gobierno')}} className="text-gray-700 hover:text-red-600 font-semibold transition-colors duration-200">Gobierno</a>
+              </div>
+            </div>
+          )}
         </div>
       </header>
 
