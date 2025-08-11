@@ -428,152 +428,160 @@ const GobiernoSection = () => (
   </section>
 )
 
-// Nacionalidad y Economía
+// Nacionalidad y Economía con animaciones súper interactivas
 const NacionalidadEconomiaSection = () => (
-  <section className="py-20 bg-white">
+  <section className="py-20 bg-white parallax-bg">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      {/* Nacionalidad */}
+      {/* Nacionalidad con animaciones dinámicas */}
       <div className="mb-20">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Nacionalidad</h2>
-          <p className="text-xl text-gray-600">Formas de adquisición y pérdida de la nacionalidad veridiana</p>
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-full mb-6 hover-lift animate-fade-in-scale stagger-1">
+            <Users className="w-5 h-5 mr-2 animate-bounce-subtle" />
+            <span className="font-semibold">Ciudadanía Veridiana</span>
+          </div>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fade-in-up stagger-2">Nacionalidad</h2>
+          <p className="text-xl text-gray-600 animate-fade-in-up stagger-3">Formas de adquisición y pérdida de la nacionalidad veridiana</p>
         </div>
         
         <div className="grid lg:grid-cols-2 gap-8">
-          {/* Adquisición */}
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 border border-green-100">
+          {/* Adquisición con efectos interactivos */}
+          <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 border border-green-100 hover-lift hover-glow transition-all duration-700 group animate-fade-in-left stagger-1">
             <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mr-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 animate-float">
                 <CheckCircle className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">Adquisición</h3>
+              <h3 className="text-2xl font-bold text-gray-900 group-hover:text-green-600 transition-colors duration-300">Adquisición</h3>
             </div>
             <div className="space-y-4">
-              <div className="flex items-start">
-                <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+              <div className="flex items-start group-item hover:bg-green-100 rounded-lg p-3 transition-all duration-300 transform hover:translate-x-2">
+                <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0 animate-pulse-subtle">
                   <CheckCircle className="w-3 h-3 text-white" />
                 </div>
-                <span className="text-gray-700">Por nacimiento en territorio veridiano</span>
+                <span className="text-gray-700 group-item-hover:text-gray-900 group-item-hover:font-semibold transition-all duration-300">Por nacimiento en territorio veridiano</span>
               </div>
-              <div className="flex items-start">
-                <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+              <div className="flex items-start group-item hover:bg-green-100 rounded-lg p-3 transition-all duration-300 transform hover:translate-x-2">
+                <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0 animate-pulse-subtle" style={{animationDelay: '0.5s'}}>
                   <CheckCircle className="w-3 h-3 text-white" />
                 </div>
-                <span className="text-gray-700">Por filiación de padre o madre veridianos</span>
+                <span className="text-gray-700 group-item-hover:text-gray-900 group-item-hover:font-semibold transition-all duration-300">Por filiación de padre o madre veridianos</span>
               </div>
-              <div className="flex items-start">
-                <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+              <div className="flex items-start group-item hover:bg-green-100 rounded-lg p-3 transition-all duration-300 transform hover:translate-x-2">
+                <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0 animate-pulse-subtle" style={{animationDelay: '1s'}}>
                   <CheckCircle className="w-3 h-3 text-white" />
                 </div>
-                <span className="text-gray-700">Por naturalización tras 5 años de residencia legal</span>
+                <span className="text-gray-700 group-item-hover:text-gray-900 group-item-hover:font-semibold transition-all duration-300">Por naturalización tras 5 años de residencia legal</span>
               </div>
             </div>
           </div>
 
-          {/* Pérdida */}
-          <div className="bg-gradient-to-br from-red-50 to-rose-50 rounded-3xl p-8 border border-red-100">
+          {/* Pérdida con efectos interactivos */}
+          <div className="bg-gradient-to-br from-red-50 to-rose-50 rounded-3xl p-8 border border-red-100 hover-lift hover-glow transition-all duration-700 group animate-fade-in-right stagger-2">
             <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-rose-600 rounded-xl flex items-center justify-center mr-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-rose-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 animate-float" style={{animationDelay: '1s'}}>
                 <ExternalLink className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">Pérdida</h3>
+              <h3 className="text-2xl font-bold text-gray-900 group-hover:text-red-600 transition-colors duration-300">Pérdida</h3>
             </div>
             <div className="space-y-4">
-              <div className="flex items-start">
-                <div className="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+              <div className="flex items-start group-item hover:bg-red-100 rounded-lg p-3 transition-all duration-300 transform hover:translate-x-2">
+                <div className="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0 animate-pulse-subtle">
                   <ExternalLink className="w-3 h-3 text-white" />
                 </div>
-                <span className="text-gray-700">Renuncia voluntaria</span>
+                <span className="text-gray-700 group-item-hover:text-gray-900 group-item-hover:font-semibold transition-all duration-300">Renuncia voluntaria</span>
               </div>
-              <div className="flex items-start">
-                <div className="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+              <div className="flex items-start group-item hover:bg-red-100 rounded-lg p-3 transition-all duration-300 transform hover:translate-x-2">
+                <div className="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0 animate-pulse-subtle" style={{animationDelay: '0.5s'}}>
                   <ExternalLink className="w-3 h-3 text-white" />
                 </div>
-                <span className="text-gray-700">Actos comprobados de traición a la República</span>
+                <span className="text-gray-700 group-item-hover:text-gray-900 group-item-hover:font-semibold transition-all duration-300">Actos comprobados de traición a la República</span>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Modelo de Economía */}
+      {/* Modelo de Economía con efectos súper dinámicos */}
       <div>
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Modelo de Economía Local</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full mb-6 hover-lift animate-fade-in-scale stagger-1">
+            <TrendingUp className="w-5 h-5 mr-2 animate-bounce-subtle" />
+            <span className="font-semibold">Economía Mixta Moderna</span>
+          </div>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fade-in-up stagger-2">Modelo de Economía Local</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in-up stagger-3">
             Economía mixta que combina iniciativa privada con regulación estatal, 
             incentivando la innovación y protegiendo la producción nacional.
           </p>
         </div>
         
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Agricultura */}
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 border border-green-100 hover:shadow-xl transition-all duration-500 group hover:-translate-y-2">
-            <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+          {/* Agricultura con animaciones súper cool */}
+          <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 border border-green-100 hover-lift hover-glow transition-all duration-700 group hover:-translate-y-3 animate-fade-in-left stagger-1">
+            <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 animate-float">
               <svg className="w-8 h-8 text-white transition-all duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m11-11v4m-2-2h4m-2 8v4m-2-2h4"/>
               </svg>
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-green-700 transition-colors duration-300">Agricultura</h3>
             <ul className="space-y-3 text-gray-600">
-              <li className="flex items-center">
-                <div className="w-2 h-2 bg-green-600 rounded-full mr-3"></div>
-                Café de alta calidad
+              <li className="flex items-center hover:translate-x-2 transition-transform duration-300 group-item">
+                <div className="w-2 h-2 bg-green-600 rounded-full mr-3 animate-pulse-subtle"></div>
+                <span className="group-item-hover:text-green-700 group-item-hover:font-semibold transition-all duration-300">Café de alta calidad</span>
               </li>
-              <li className="flex items-center">
-                <div className="w-2 h-2 bg-green-600 rounded-full mr-3"></div>
-                Cacao orgánico
+              <li className="flex items-center hover:translate-x-2 transition-transform duration-300 group-item">
+                <div className="w-2 h-2 bg-green-600 rounded-full mr-3 animate-pulse-subtle" style={{animationDelay: '0.5s'}}></div>
+                <span className="group-item-hover:text-green-700 group-item-hover:font-semibold transition-all duration-300">Cacao orgánico</span>
               </li>
-              <li className="flex items-center">
-                <div className="w-2 h-2 bg-green-600 rounded-full mr-3"></div>
-                Frutas tropicales
+              <li className="flex items-center hover:translate-x-2 transition-transform duration-300 group-item">
+                <div className="w-2 h-2 bg-green-600 rounded-full mr-3 animate-pulse-subtle" style={{animationDelay: '1s'}}></div>
+                <span className="group-item-hover:text-green-700 group-item-hover:font-semibold transition-all duration-300">Frutas tropicales</span>
               </li>
             </ul>
           </div>
 
-          {/* Industria */}
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 border border-blue-100 hover:shadow-xl transition-all duration-500 group hover:-translate-y-2">
-            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+          {/* Industria con efectos súper dinámicos */}
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 border border-blue-100 hover-lift hover-glow transition-all duration-700 group hover:-translate-y-3 animate-fade-in-up stagger-2">
+            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 animate-float" style={{animationDelay: '1s'}}>
               <svg className="w-8 h-8 text-white transition-all duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
               </svg>
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-700 transition-colors duration-300">Industria</h3>
             <ul className="space-y-3 text-gray-600">
-              <li className="flex items-center">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                Sector textil
+              <li className="flex items-center hover:translate-x-2 transition-transform duration-300 group-item">
+                <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 animate-pulse-subtle"></div>
+                <span className="group-item-hover:text-blue-700 group-item-hover:font-semibold transition-all duration-300">Sector textil</span>
               </li>
-              <li className="flex items-center">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                Tecnología avanzada
+              <li className="flex items-center hover:translate-x-2 transition-transform duration-300 group-item">
+                <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 animate-pulse-subtle" style={{animationDelay: '0.5s'}}></div>
+                <span className="group-item-hover:text-blue-700 group-item-hover:font-semibold transition-all duration-300">Tecnología avanzada</span>
               </li>
-              <li className="flex items-center">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                Energías renovables
+              <li className="flex items-center hover:translate-x-2 transition-transform duration-300 group-item">
+                <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 animate-pulse-subtle" style={{animationDelay: '1s'}}></div>
+                <span className="group-item-hover:text-blue-700 group-item-hover:font-semibold transition-all duration-300">Energías renovables</span>
               </li>
             </ul>
           </div>
 
-          {/* Servicios */}
-          <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-3xl p-8 border border-purple-100 hover:shadow-xl transition-all duration-500 group hover:-translate-y-2">
-            <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-violet-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+          {/* Servicios con efectos súper interactivos */}
+          <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-3xl p-8 border border-purple-100 hover-lift hover-glow transition-all duration-700 group hover:-translate-y-3 animate-fade-in-right stagger-3">
+            <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-violet-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 animate-float" style={{animationDelay: '2s'}}>
               <Briefcase className="w-8 h-8 text-white transition-all duration-300 group-hover:rotate-12" />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-700 transition-colors duration-300">Servicios</h3>
             <ul className="space-y-3 text-gray-600">
-              <li className="flex items-center">
-                <div className="w-2 h-2 bg-purple-600 rounded-full mr-3"></div>
-                Turismo ecológico
+              <li className="flex items-center hover:translate-x-2 transition-transform duration-300 group-item">
+                <div className="w-2 h-2 bg-purple-600 rounded-full mr-3 animate-pulse-subtle"></div>
+                <span className="group-item-hover:text-purple-700 group-item-hover:font-semibold transition-all duration-300">Turismo ecológico</span>
               </li>
-              <li className="flex items-center">
-                <div className="w-2 h-2 bg-purple-600 rounded-full mr-3"></div>
-                Finanzas digitales
+              <li className="flex items-center hover:translate-x-2 transition-transform duration-300 group-item">
+                <div className="w-2 h-2 bg-purple-600 rounded-full mr-3 animate-pulse-subtle" style={{animationDelay: '0.5s'}}></div>
+                <span className="group-item-hover:text-purple-700 group-item-hover:font-semibold transition-all duration-300">Finanzas digitales</span>
               </li>
-              <li className="flex items-center">
-                <div className="w-2 h-2 bg-purple-600 rounded-full mr-3"></div>
-                Servicios innovadores
+              <li className="flex items-center hover:translate-x-2 transition-transform duration-300 group-item">
+                <div className="w-2 h-2 bg-purple-600 rounded-full mr-3 animate-pulse-subtle" style={{animationDelay: '1s'}}></div>
+                <span className="group-item-hover:text-purple-700 group-item-hover:font-semibold transition-all duration-300">Servicios innovadores</span>
               </li>
             </ul>
           </div>
@@ -660,52 +668,60 @@ const ProcesoJuridicoSection = () => (
   </section>
 )
 
+// Footer súper interactivo con animaciones dinámicas
 const Footer = () => (
-  <footer className="bg-gradient-to-r from-slate-900 via-gray-900 to-slate-900 text-white py-16">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <footer className="bg-gradient-to-r from-slate-900 via-gray-900 to-slate-900 text-white py-16 relative overflow-hidden">
+    {/* Elementos de fondo animados */}
+    <div className="absolute inset-0 opacity-5">
+      <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500 rounded-full animate-float"></div>
+      <div className="absolute bottom-20 right-20 w-24 h-24 bg-purple-500 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
+      <div className="absolute top-40 right-40 w-16 h-16 bg-green-500 rounded-full animate-float" style={{animationDelay: '4s'}}></div>
+    </div>
+    
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div className="grid lg:grid-cols-4 gap-8">
-        <div className="lg:col-span-2">
-          <div className="flex items-center space-x-4 mb-6">
-            <div className="w-12 h-12 bg-gradient-to-br from-emerald-400 via-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-              <Building2 className="w-6 h-6 text-white" />
+        <div className="lg:col-span-2 animate-fade-in-left">
+          <div className="flex items-center space-x-4 mb-6 group">
+            <div className="w-12 h-12 bg-gradient-to-br from-emerald-400 via-blue-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 animate-pulse-glow">
+              <Building2 className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-300" />
             </div>
             <div>
-              <h3 className="text-2xl font-black bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <h3 className="text-2xl font-black bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent group-hover:from-purple-400 group-hover:to-pink-400 transition-all duration-500">
                 REPÚBLICA DE VERIDIA
               </h3>
-              <p className="text-gray-400 font-medium">Portal Gubernamental Oficial</p>
+              <p className="text-gray-400 font-medium group-hover:text-blue-300 transition-colors duration-300">Portal Gubernamental Oficial</p>
             </div>
           </div>
-          <p className="text-gray-300 leading-relaxed max-w-lg mb-6">
+          <p className="text-gray-300 leading-relaxed max-w-lg mb-6 hover:text-gray-200 transition-colors duration-300">
             Sistema presidencial republicano comprometido con la transparencia, la justicia social 
             y el desarrollo sostenible de nuestros 8.9 millones de ciudadanos.
           </p>
           <div className="flex items-center space-x-4">
-            <div className="flex items-center text-gray-400">
-              <MapPin className="w-4 h-4 mr-2" />
-              <span className="text-sm">Nova Aurelia, Capital</span>
+            <div className="flex items-center text-gray-400 hover:text-blue-300 transition-all duration-300 group cursor-pointer">
+              <MapPin className="w-4 h-4 mr-2 group-hover:animate-bounce" />
+              <span className="text-sm group-hover:font-semibold">Nova Aurelia, Capital</span>
             </div>
-            <div className="flex items-center text-gray-400">
-              <Map className="w-4 h-4 mr-2" />
-              <span className="text-sm">35,200 km²</span>
+            <div className="flex items-center text-gray-400 hover:text-green-300 transition-all duration-300 group cursor-pointer">
+              <Map className="w-4 h-4 mr-2 group-hover:animate-bounce" />
+              <span className="text-sm group-hover:font-semibold">35,200 km²</span>
             </div>
           </div>
         </div>
 
-        <div>
-          <h4 className="text-lg font-bold mb-4 text-white">Contacto Institucional</h4>
+        <div className="animate-fade-in-up stagger-1">
+          <h4 className="text-lg font-bold mb-4 text-white hover:text-blue-300 transition-colors duration-300 cursor-pointer">Contacto Institucional</h4>
           <div className="space-y-3">
-            <div className="flex items-center text-gray-300">
-              <Phone className="w-4 h-4 mr-3 text-blue-400" />
-              <span className="text-sm">+504 0000 0000</span>
+            <div className="flex items-center text-gray-300 hover:text-white hover:translate-x-2 transition-all duration-300 group cursor-pointer">
+              <Phone className="w-4 h-4 mr-3 text-blue-400 group-hover:animate-bounce" />
+              <span className="text-sm group-hover:font-semibold">+504 0000 0000</span>
             </div>
-            <div className="flex items-center text-gray-300">
-              <Mail className="w-4 h-4 mr-3 text-blue-400" />
-              <span className="text-sm">contacto@gob.veridia</span>
+            <div className="flex items-center text-gray-300 hover:text-white hover:translate-x-2 transition-all duration-300 group cursor-pointer">
+              <Mail className="w-4 h-4 mr-3 text-blue-400 group-hover:animate-bounce" />
+              <span className="text-sm group-hover:font-semibold">contacto@gob.veridia</span>
             </div>
-            <div className="flex items-start text-gray-300">
-              <MapPin className="w-4 h-4 mr-3 mt-0.5 text-blue-400" />
-              <div className="text-sm">
+            <div className="flex items-start text-gray-300 hover:text-white hover:translate-x-2 transition-all duration-300 group cursor-pointer">
+              <MapPin className="w-4 h-4 mr-3 mt-0.5 text-blue-400 group-hover:animate-bounce" />
+              <div className="text-sm group-hover:font-semibold">
                 <div>Palacio Nacional</div>
                 <div>Nova Aurelia, Veridia</div>
               </div>
@@ -713,14 +729,14 @@ const Footer = () => (
           </div>
         </div>
 
-        <div>
-          <h4 className="text-lg font-bold mb-4 text-white">Equipo de Desarrollo</h4>
+        <div className="animate-fade-in-up stagger-2">
+          <h4 className="text-lg font-bold mb-4 text-white hover:text-purple-300 transition-colors duration-300 cursor-pointer">Equipo de Desarrollo</h4>
           <div className="space-y-2">
-            <div className="text-gray-300 text-sm">
-              <div className="font-medium text-blue-400">Edwin Alexander Villalta</div>
+            <div className="text-gray-300 text-sm hover:text-white hover:translate-x-2 transition-all duration-300 group cursor-pointer">
+              <div className="font-medium text-blue-400 group-hover:text-blue-300 group-hover:font-bold">Edwin Alexander Villalta</div>
             </div>
-            <div className="text-gray-300 text-sm">
-              <div className="font-medium text-blue-400">Cesar Alexander Romero Vazques</div>
+            <div className="text-gray-300 text-sm hover:text-white hover:translate-x-2 transition-all duration-300 group cursor-pointer">
+              <div className="font-medium text-blue-400 group-hover:text-blue-300 group-hover:font-bold">Cesar Alexander Romero Vazques</div>
             </div>
             <div className="text-gray-300 text-sm">
               <div className="font-medium text-blue-400">Fredy Alexander Funes Ortiz</div>
@@ -757,37 +773,44 @@ const Footer = () => (
 const App = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-gray-900">
-      {/* Header */}
-      <header className="bg-white/80 backdrop-blur-sm shadow-lg border-b border-blue-100 sticky top-0 z-50">
+      {/* Header súper interactivo con animaciones */}
+      <header className="bg-white/85 backdrop-blur-md shadow-xl border-b border-blue-100 sticky top-0 z-50 transition-all duration-500 hover:bg-white/95 hover:shadow-2xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center space-x-4">
-              <div className="relative group">
-                <div className="w-12 h-12 bg-gradient-to-br from-emerald-400 via-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg transition-all duration-300 group-hover:scale-110">
-                  <Building2 className="w-7 h-7 text-white" />
+            <div className="flex items-center space-x-4 animate-fade-in-left">
+              <div className="relative group cursor-pointer">
+                <div className="w-12 h-12 bg-gradient-to-br from-emerald-400 via-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg transition-all duration-500 group-hover:scale-125 group-hover:rotate-12 group-hover:shadow-2xl animate-pulse-glow">
+                  <Building2 className="w-7 h-7 text-white group-hover:scale-110 transition-transform duration-300" />
                 </div>
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-white animate-pulse"></div>
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-white animate-bounce group-hover:bg-yellow-400 transition-colors duration-300"></div>
+                <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-blue-400 rounded-full border border-white opacity-0 group-hover:opacity-100 animate-pulse transition-all duration-500"></div>
               </div>
-              <div>
-                <h1 className="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              <div className="group">
+                <h1 className="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 group-hover:from-purple-600 group-hover:to-pink-600 transition-all duration-500 cursor-pointer">
                   REPÚBLICA DE VERIDIA
                 </h1>
-                <p className="text-sm text-gray-500 font-medium">Portal Gubernamental Oficial</p>
+                <p className="text-sm text-gray-500 font-medium group-hover:text-blue-600 transition-colors duration-300">Portal Gubernamental Oficial</p>
               </div>
             </div>
             
-            <nav className="hidden lg:flex space-x-8">
-              <NavLink href="#inicio">Inicio</NavLink>
-              <NavLink href="#datos-principales">Datos Principales</NavLink>
-              <NavLink href="#marco-juridico">Marco Jurídico</NavLink>
-              <NavLink href="#gobierno">Gobierno</NavLink>
+            <nav className="hidden lg:flex space-x-8 animate-fade-in-up">
+              <div className="relative group">
+                <NavLink href="#inicio">Inicio</NavLink>
+                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-500 group-hover:w-full"></div>
+              </div>
+              <div className="relative group">
+                <NavLink href="#datos-principales">Datos Principales</NavLink>
+                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-green-600 to-emerald-600 transition-all duration-500 group-hover:w-full"></div>
+              </div>
+              <div className="relative group">
+                <NavLink href="#marco-juridico">Marco Jurídico</NavLink>
+                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-500 group-hover:w-full"></div>
+              </div>
+              <div className="relative group">
+                <NavLink href="#gobierno">Gobierno</NavLink>
+                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-orange-600 transition-all duration-500 group-hover:w-full"></div>
+              </div>
             </nav>
-            
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg font-semibold shadow-lg transition-all duration-200 transform hover:scale-105 flex items-center space-x-2">
-              <Globe className="w-4 h-4" />
-              <span>Portal Ciudadano</span>
-              <ExternalLink className="w-4 h-4" />
-            </button>
           </div>
         </div>
       </header>
