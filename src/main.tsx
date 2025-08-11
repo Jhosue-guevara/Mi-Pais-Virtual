@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
 import './style.css'
 import { 
@@ -17,20 +17,79 @@ import {
   Scale,
   FileText,
   Shield,
-  TrendingUp
+  TrendingUp,
+  ChevronUp
 } from 'lucide-react'
 import { section } from 'framer-motion/client'
 
-// Componente de enlace de navegación
-const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
-  <a 
-    href={href} 
-    className="text-gray-600 hover:text-blue-600 font-semibold transition-colors duration-200 relative group"
-  >
-    {children}
-    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-  </a>
-)
+// Componente de enlace de navegación con scroll suave
+const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    const target = document.querySelector(href)
+    if (target) {
+      target.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+  }
+
+  return (
+    <a 
+      href={href}
+      onClick={handleClick}
+      className="text-gray-600 hover:text-blue-600 font-semibold transition-colors duration-200 relative group cursor-pointer"
+    >
+      {children}
+      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+    </a>
+  )
+}
+
+// Componente Scroll to Top súper interactivo
+const ScrollToTop = () => {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.scrollY > 300) {
+        setIsVisible(true)
+      } else {
+        setIsVisible(false)
+      }
+    }
+
+    window.addEventListener('scroll', toggleVisibility)
+    return () => window.removeEventListener('scroll', toggleVisibility)
+  }, [])
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+
+  return (
+    <>
+      {isVisible && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 z-50 w-14 h-14 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-purple-600 hover:to-pink-600 text-white rounded-full shadow-2xl transition-all duration-500 transform hover:scale-110 hover:-translate-y-2 flex items-center justify-center group animate-fade-in-scale hover-glow"
+          aria-label="Volver arriba"
+        >
+          <ChevronUp className="w-6 h-6 group-hover:animate-bounce transition-all duration-300" />
+          <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 rounded-full transition-opacity duration-300"></div>
+          
+          {/* Efecto de ondas al hover */}
+          <div className="absolute -inset-2 rounded-full border-2 border-white/20 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"></div>
+          <div className="absolute -inset-4 rounded-full border border-white/10 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-1000"></div>
+        </button>
+      )}
+    </>
+  )
+}
 
 // Hero Section con datos principales destacados y animaciones suaves
 const HeroSection = () => (
@@ -777,7 +836,7 @@ const App = () => {
       <header className="bg-white/85 backdrop-blur-md shadow-xl border-b border-blue-100 sticky top-0 z-50 transition-all duration-500 hover:bg-white/95 hover:shadow-2xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center space-x-4 animate-fade-in-left">
+            <div className="flex items-center space-x-4 animate-fade-in-left" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <div className="relative group cursor-pointer">
                 <div className="w-12 h-12 bg-gradient-to-br from-emerald-400 via-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg transition-all duration-500 group-hover:scale-125 group-hover:rotate-12 group-hover:shadow-2xl animate-pulse-glow">
                   <Building2 className="w-7 h-7 text-white group-hover:scale-110 transition-transform duration-300" />
@@ -785,11 +844,11 @@ const App = () => {
                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-white animate-bounce group-hover:bg-yellow-400 transition-colors duration-300"></div>
                 <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-blue-400 rounded-full border border-white opacity-0 group-hover:opacity-100 animate-pulse transition-all duration-500"></div>
               </div>
-              <div className="group">
-                <h1 className="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 group-hover:from-purple-600 group-hover:to-pink-600 transition-all duration-500 cursor-pointer">
+              <div className="group cursor-pointer">
+                <h1 className="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 group-hover:from-purple-600 group-hover:to-pink-600 transition-all duration-500 select-none">
                   REPÚBLICA DE VERIDIA
                 </h1>
-                <p className="text-sm text-gray-500 font-medium group-hover:text-blue-600 transition-colors duration-300">Portal Gubernamental Oficial</p>
+                <p className="text-sm text-gray-500 font-medium group-hover:text-blue-600 transition-colors duration-300 select-none">Portal Gubernamental Oficial</p>
               </div>
             </div>
             
@@ -821,6 +880,9 @@ const App = () => {
       <NacionalidadEconomiaSection />
       <ProcesoJuridicoSection />
       <Footer />
+      
+      {/* Botón Scroll to Top súper interactivo */}
+      <ScrollToTop />
     </div>
   )
 }

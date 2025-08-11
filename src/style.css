@@ -3,6 +3,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+html {
+  scroll-behavior: smooth; /* Scroll suave para toda la página */
+}
+
 html, body, #app {
   height: 100%;
 }
