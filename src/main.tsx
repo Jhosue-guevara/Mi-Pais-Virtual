@@ -802,7 +802,7 @@ const Footer = () => (
           <h4 className="text-lg font-bold mb-4 text-white hover:text-purple-300 transition-colors duration-300 cursor-pointer">Equipo de Desarrollo</h4>
           <div className="space-y-2">
             <div className="text-gray-300 text-sm hover:text-white hover:translate-x-2 transition-all duration-300 group cursor-pointer">
-              <div className="font-medium text-blue-400 group-hover:text-blue-300 group-hover:font-bold">Edwin Alexander Villalta</div>
+              <div className="font-medium text-blue-400 group-hover:text-blue-300 group-hover:font-bold">Edwin Alexander Villalta Ortiz</div>
             </div>
             <div className="text-gray-300 text-sm hover:text-white hover:translate-x-2 transition-all duration-300 group cursor-pointer">
               <div className="font-medium text-blue-400 group-hover:text-blue-300 group-hover:font-bold">Cesar Alexander Romero Vazques</div>
@@ -825,7 +825,7 @@ const Footer = () => (
       <div className="border-t border-gray-700 mt-12 pt-8">
         <div className="flex flex-col lg:flex-row justify-between items-center">
           <div className="text-gray-400 text-sm mb-4 lg:mb-0">
-            © 2024 República de Veridia. Todos los derechos reservados.
+            © 2025 República de Veridia. Todos los derechos reservados.
           </div>
           <div className="flex space-x-6 text-sm text-gray-400">
             <a href="#datos-principales" className="hover:text-blue-400 transition-colors duration-200">Datos Principales</a>
