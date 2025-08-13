@@ -858,8 +858,13 @@ const App = () => {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-4 animate-fade-in-left" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <div className="relative group cursor-pointer">
-                <img src="/public/Logo.png" alt="Logo de Veridia" className="w-12 h-12 rounded-xl shadow-lg border-2 border-blue-200 bg-white object-cover transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-2xl" />
+                <img
+                  src="/Logo.png"
+                  alt="Logo de Veridia"
+                  className="w-12 h-12 rounded-xl shadow-lg border-2 border-blue-200 bg-white object-cover transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-2xl"
+                />
               </div>
+
               <div className="group cursor-pointer">
                 <h1 className="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 group-hover:from-purple-600 group-hover:to-pink-600 transition-all duration-500 select-none">
                   REPÚBLICA
