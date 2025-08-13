@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
 import './style.css'
-import { 
-  Building2, 
-  Users, 
-  Map, 
+import {
+  Building2,
+  Users,
+  Map,
   Briefcase,
   Globe,
   ExternalLink,
@@ -28,7 +28,7 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
     e.preventDefault()
     const target = document.querySelector(href)
     if (target) {
-      target.scrollIntoView({ 
+      target.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
       })
@@ -36,7 +36,7 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
   }
 
   return (
-    <a 
+    <a
       href={href}
       onClick={handleClick}
       className="text-gray-600 hover:text-blue-600 font-semibold transition-colors duration-200 relative group cursor-pointer"
@@ -81,7 +81,7 @@ const ScrollToTop = () => {
         >
           <ChevronUp className="w-6 h-6 group-hover:animate-bounce transition-all duration-300" />
           <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 rounded-full transition-opacity duration-300"></div>
-          
+
           {/* Efecto de ondas al hover */}
           <div className="absolute -inset-2 rounded-full border-2 border-white/20 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"></div>
           <div className="absolute -inset-4 rounded-full border border-white/10 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-1000"></div>
@@ -105,8 +105,10 @@ const HeroSection = () => (
           REPÚBLICA DE VERIDIA
         </h1>
         <p className="text-base sm:text-xl lg:text-2xl text-blue-100 font-light max-w-md sm:max-w-2xl md:max-w-3xl mx-auto leading-relaxed animate-fade-in-up stagger-3">
-          Una nación moderna comprometida con la justicia, la transparencia y el desarrollo sostenible de sus ciudadanos.
+          Veridia, cuyo nombre proviene de la palabra “verde”, simboliza esperanza, prosperidad y naturaleza.
+          Es un país virtual con identidad propia y un sistema democrático creado como proyecto académico.
         </p>
+
       </div>
 
       {/* Datos Principales Destacados con animaciones escalonadas */}
@@ -124,7 +126,7 @@ const HeroSection = () => (
 
         <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover-lift hover-glow transition-all duration-300 group animate-fade-in-up stagger-2">
           <div className="flex items-center mb-4">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-500 animate-float" style={{animationDelay: '1s'}}>
+            <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-500 animate-float" style={{ animationDelay: '1s' }}>
               <Users className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-lg font-bold text-white">Población</h3>
@@ -135,7 +137,7 @@ const HeroSection = () => (
 
         <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover-lift hover-glow transition-all duration-300 group animate-fade-in-up stagger-3">
           <div className="flex items-center mb-4">
-            <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-500 animate-float" style={{animationDelay: '2s'}}>
+            <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-500 animate-float" style={{ animationDelay: '2s' }}>
               <Map className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-lg font-bold text-white">Territorio</h3>
@@ -146,7 +148,7 @@ const HeroSection = () => (
 
         <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover-lift hover-glow transition-all duration-300 group animate-fade-in-right stagger-4">
           <div className="flex items-center mb-4">
-            <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-500 animate-float" style={{animationDelay: '3s'}}>
+            <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-500 animate-float" style={{ animationDelay: '3s' }}>
               <Building2 className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-lg font-bold text-white">División</h3>
@@ -195,12 +197,12 @@ const MarcoJuridicoSection = () => (
             <div>
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Concepto de Derecho</h3>
               <p className="text-lg text-gray-700 leading-relaxed">
-                En Veridia, el <strong>Derecho</strong> es el conjunto de normas obligatorias que regulan la vida social, 
+                En Veridia, el <strong>Derecho</strong> es el conjunto de normas obligatorias que regulan la vida social,
                 garantizan la justicia y protegen los derechos de todas las personas.
               </p>
             </div>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white rounded-xl p-6 shadow-sm border border-blue-100 hover-lift hover-glow transition-all duration-300 group animate-fade-in-left stagger-1">
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 animate-float">
@@ -210,14 +212,14 @@ const MarcoJuridicoSection = () => (
               <p className="text-gray-600 text-sm">Mantiene el orden y la paz social</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm border border-blue-100 hover-lift hover-glow transition-all duration-300 group animate-fade-in-up stagger-2">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 animate-float" style={{animationDelay: '1s'}}>
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 animate-float" style={{ animationDelay: '1s' }}>
                 <Scale className="w-6 h-6 text-purple-600" />
               </div>
               <h4 className="font-bold text-gray-900 mb-2">Límites del Poder</h4>
               <p className="text-gray-600 text-sm">Establece los límites del poder</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm border border-blue-100 hover-lift hover-glow transition-all duration-300 group animate-fade-in-right stagger-3">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 animate-float" style={{animationDelay: '2s'}}>
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 animate-float" style={{ animationDelay: '2s' }}>
                 <Users className="w-6 h-6 text-blue-600" />
               </div>
               <h4 className="font-bold text-gray-900 mb-2">Protección</h4>
@@ -238,22 +240,22 @@ const MarcoJuridicoSection = () => (
             <h3 className="text-2xl font-bold text-gray-900 group-hover:text-emerald-700 transition-colors duration-300">Normas Jurídicas Fundamentales</h3>
           </div>
           <div className="space-y-4">
-            <div className="flex items-start group-item hover:bg-emerald-100 rounded-lg p-3 transition-all duration-500 hover:translate-x-2 hover:shadow-lg animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+            <div className="flex items-start group-item hover:bg-emerald-100 rounded-lg p-3 transition-all duration-500 hover:translate-x-2 hover:shadow-lg animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               <span className="inline-flex items-center justify-center w-8 h-8 bg-emerald-600 text-white text-sm font-bold rounded-full mr-4 flex-shrink-0 group-item-hover:scale-125 group-item-hover:animate-bounce transition-all duration-300 animate-pulse-subtle">1</span>
               <div>
                 <h4 className="font-semibold text-gray-900 mb-1 group-item-hover:text-emerald-800 group-item-hover:font-bold transition-all duration-300">Respeto a la Vida</h4>
                 <p className="text-gray-600 text-sm group-item-hover:text-gray-800 transition-colors duration-300">Ninguna persona podrá ser privada de su vida o sometida a violencia de forma ilegal.</p>
               </div>
             </div>
-            <div className="flex items-start group-item hover:bg-emerald-100 rounded-lg p-3 transition-all duration-500 hover:translate-x-2 hover:shadow-lg animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-              <span className="inline-flex items-center justify-center w-8 h-8 bg-emerald-600 text-white text-sm font-bold rounded-full mr-4 flex-shrink-0 group-item-hover:scale-125 group-item-hover:animate-bounce transition-all duration-300 animate-pulse-subtle" style={{animationDelay: '0.5s'}}>2</span>
+            <div className="flex items-start group-item hover:bg-emerald-100 rounded-lg p-3 transition-all duration-500 hover:translate-x-2 hover:shadow-lg animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <span className="inline-flex items-center justify-center w-8 h-8 bg-emerald-600 text-white text-sm font-bold rounded-full mr-4 flex-shrink-0 group-item-hover:scale-125 group-item-hover:animate-bounce transition-all duration-300 animate-pulse-subtle" style={{ animationDelay: '0.5s' }}>2</span>
               <div>
                 <h4 className="font-semibold text-gray-900 mb-1 group-item-hover:text-emerald-800 group-item-hover:font-bold transition-all duration-300">Igualdad ante la Ley</h4>
                 <p className="text-gray-600 text-sm group-item-hover:text-gray-800 transition-colors duration-300">Todos los ciudadanos tienen los mismos derechos y obligaciones, sin distinción.</p>
               </div>
             </div>
-            <div className="flex items-start group-item hover:bg-emerald-100 rounded-lg p-3 transition-all duration-500 hover:translate-x-2 hover:shadow-lg animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-              <span className="inline-flex items-center justify-center w-8 h-8 bg-emerald-600 text-white text-sm font-bold rounded-full mr-4 flex-shrink-0 group-item-hover:scale-125 group-item-hover:animate-bounce transition-all duration-300 animate-pulse-subtle" style={{animationDelay: '1s'}}>3</span>
+            <div className="flex items-start group-item hover:bg-emerald-100 rounded-lg p-3 transition-all duration-500 hover:translate-x-2 hover:shadow-lg animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+              <span className="inline-flex items-center justify-center w-8 h-8 bg-emerald-600 text-white text-sm font-bold rounded-full mr-4 flex-shrink-0 group-item-hover:scale-125 group-item-hover:animate-bounce transition-all duration-300 animate-pulse-subtle" style={{ animationDelay: '1s' }}>3</span>
               <div>
                 <h4 className="font-semibold text-gray-900 mb-1 group-item-hover:text-emerald-800 group-item-hover:font-bold transition-all duration-300">Protección Ambiental</h4>
                 <p className="text-gray-600 text-sm group-item-hover:text-gray-800 transition-colors duration-300">El uso de recursos naturales debe ser responsible y sostenible.</p>
@@ -265,34 +267,34 @@ const MarcoJuridicoSection = () => (
         {/* Fuentes del Derecho con efectos súper interactivos */}
         <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-3xl p-8 border border-purple-100 hover-lift hover-glow transition-all duration-700 group animate-fade-in-right stagger-2">
           <div className="flex items-center mb-6">
-            <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 animate-float" style={{animationDelay: '1s'}}>
+            <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 animate-float" style={{ animationDelay: '1s' }}>
               <FileText className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-300" />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 group-hover:text-purple-700 transition-colors duration-300">Fuentes del Derecho</h3>
           </div>
           <ul className="space-y-3">
-            <li className="flex items-center group-item hover:bg-purple-100 rounded-lg p-2 transition-all duration-300 hover:translate-x-2 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+            <li className="flex items-center group-item hover:bg-purple-100 rounded-lg p-2 transition-all duration-300 hover:translate-x-2 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               <div className="w-3 h-3 bg-purple-600 rounded-full mr-3 group-item-hover:scale-150 group-item-hover:animate-pulse transition-all duration-300 animate-pulse-subtle"></div>
               <span className="text-gray-700 group-item-hover:text-purple-800 group-item-hover:font-semibold transition-all duration-300">Constitución de la República de Veridia</span>
             </li>
-            <li className="flex items-center group-item hover:bg-purple-100 rounded-lg p-2 transition-all duration-300 hover:translate-x-2 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-              <div className="w-3 h-3 bg-purple-600 rounded-full mr-3 group-item-hover:scale-150 group-item-hover:animate-pulse transition-all duration-300 animate-pulse-subtle" style={{animationDelay: '0.5s'}}></div>
+            <li className="flex items-center group-item hover:bg-purple-100 rounded-lg p-2 transition-all duration-300 hover:translate-x-2 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <div className="w-3 h-3 bg-purple-600 rounded-full mr-3 group-item-hover:scale-150 group-item-hover:animate-pulse transition-all duration-300 animate-pulse-subtle" style={{ animationDelay: '0.5s' }}></div>
               <span className="text-gray-700">Leyes aprobadas por la Asamblea Nacional</span>
             </li>
-            <li className="flex items-center group-item hover:bg-purple-100 rounded-lg p-2 transition-all duration-300 hover:translate-x-2 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-              <div className="w-3 h-3 bg-purple-600 rounded-full mr-3 group-item-hover:scale-150 group-item-hover:animate-pulse transition-all duration-300 animate-pulse-subtle" style={{animationDelay: '1s'}}></div>
+            <li className="flex items-center group-item hover:bg-purple-100 rounded-lg p-2 transition-all duration-300 hover:translate-x-2 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+              <div className="w-3 h-3 bg-purple-600 rounded-full mr-3 group-item-hover:scale-150 group-item-hover:animate-pulse transition-all duration-300 animate-pulse-subtle" style={{ animationDelay: '1s' }}></div>
               <span className="text-gray-700 group-item-hover:text-purple-800 group-item-hover:font-semibold transition-all duration-300">Reglamentos emitidos por el Poder Ejecutivo</span>
             </li>
-            <li className="flex items-center group-item hover:bg-purple-100 rounded-lg p-2 transition-all duration-300 hover:translate-x-2 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
-              <div className="w-3 h-3 bg-purple-600 rounded-full mr-3 group-item-hover:scale-150 group-item-hover:animate-pulse transition-all duration-300 animate-pulse-subtle" style={{animationDelay: '1.5s'}}></div>
+            <li className="flex items-center group-item hover:bg-purple-100 rounded-lg p-2 transition-all duration-300 hover:translate-x-2 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+              <div className="w-3 h-3 bg-purple-600 rounded-full mr-3 group-item-hover:scale-150 group-item-hover:animate-pulse transition-all duration-300 animate-pulse-subtle" style={{ animationDelay: '1.5s' }}></div>
               <span className="text-gray-700 group-item-hover:text-purple-800 group-item-hover:font-semibold transition-all duration-300">Costumbre compatible con la ley</span>
             </li>
-            <li className="flex items-center group-item hover:bg-purple-100 rounded-lg p-2 transition-all duration-300 hover:translate-x-2 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
-              <div className="w-3 h-3 bg-purple-600 rounded-full mr-3 group-item-hover:scale-150 group-item-hover:animate-pulse transition-all duration-300 animate-pulse-subtle" style={{animationDelay: '2s'}}></div>
+            <li className="flex items-center group-item hover:bg-purple-100 rounded-lg p-2 transition-all duration-300 hover:translate-x-2 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+              <div className="w-3 h-3 bg-purple-600 rounded-full mr-3 group-item-hover:scale-150 group-item-hover:animate-pulse transition-all duration-300 animate-pulse-subtle" style={{ animationDelay: '2s' }}></div>
               <span className="text-gray-700 group-item-hover:text-purple-800 group-item-hover:font-semibold transition-all duration-300">Jurisprudencia de la Corte Suprema</span>
             </li>
-            <li className="flex items-center group-item hover:bg-purple-100 rounded-lg p-2 transition-all duration-300 hover:translate-x-2 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
-              <div className="w-3 h-3 bg-purple-600 rounded-full mr-3 group-item-hover:scale-150 group-item-hover:animate-pulse transition-all duration-300 animate-pulse-subtle" style={{animationDelay: '2.5s'}}></div>
+            <li className="flex items-center group-item hover:bg-purple-100 rounded-lg p-2 transition-all duration-300 hover:translate-x-2 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+              <div className="w-3 h-3 bg-purple-600 rounded-full mr-3 group-item-hover:scale-150 group-item-hover:animate-pulse transition-all duration-300 animate-pulse-subtle" style={{ animationDelay: '2.5s' }}></div>
               <span className="text-gray-700 group-item-hover:text-purple-800 group-item-hover:font-semibold transition-all duration-300">Doctrina jurídica de expertos</span>
             </li>
           </ul>
@@ -304,8 +306,8 @@ const MarcoJuridicoSection = () => (
         {/* Elementos de fondo animados */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-10 left-20 w-20 h-20 bg-yellow-500 rounded-full animate-float"></div>
-          <div className="absolute bottom-20 right-10 w-16 h-16 bg-orange-500 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
-          <div className="absolute top-1/2 right-1/3 w-12 h-12 bg-red-500 rounded-full animate-float" style={{animationDelay: '4s'}}></div>
+          <div className="absolute bottom-20 right-10 w-16 h-16 bg-orange-500 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-1/2 right-1/3 w-12 h-12 bg-red-500 rounded-full animate-float" style={{ animationDelay: '4s' }}></div>
         </div>
 
         <div className="text-center mb-12 relative z-10">
@@ -315,7 +317,7 @@ const MarcoJuridicoSection = () => (
           <h3 className="text-3xl font-bold mb-4 hover:text-yellow-300 transition-colors duration-300 cursor-pointer">Jerarquía Normativa</h3>
           <p className="text-gray-300 max-w-2xl mx-auto hover:text-white transition-colors duration-300">Orden jerárquico de las normas jurídicas en la República de Veridia</p>
         </div>
-        
+
         <div className="max-w-3xl mx-auto relative z-10">
           <div className="space-y-4">
             {[
@@ -326,12 +328,12 @@ const MarcoJuridicoSection = () => (
               { num: 5, text: "Ordenanzas municipales", bg: "from-blue-500 to-blue-600", delay: "0.5s" },
               { num: 6, text: "Costumbre y jurisprudencia", bg: "from-purple-500 to-purple-600", delay: "0.6s" }
             ].map(item => (
-              <div key={item.num} className={`flex items-center bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover-lift hover-glow transition-all duration-500 group cursor-pointer animate-fade-in-left`} style={{animationDelay: item.delay}}>
+              <div key={item.num} className={`flex items-center bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover-lift hover-glow transition-all duration-500 group cursor-pointer animate-fade-in-left`} style={{ animationDelay: item.delay }}>
                 <div className={`w-12 h-12 bg-gradient-to-br ${item.bg} rounded-xl flex items-center justify-center mr-4 text-white font-bold group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 animate-bounce-subtle`}>
                   {item.num}
                 </div>
                 <span className="text-lg font-semibold group-hover:text-yellow-200 group-hover:scale-105 transition-all duration-300">{item.text}</span>
-                
+
                 {/* Efectos de ondas al hover */}
                 <div className="absolute -inset-1 rounded-xl border border-white/10 opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"></div>
                 <div className="absolute -inset-2 rounded-xl border border-white/5 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"></div>
@@ -386,7 +388,7 @@ const GobiernoSection = () => (
 
             {/* Requisitos */}
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-100 hover-lift hover-glow transition-all duration-500 group animate-fade-in-up stagger-2">
-              <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 animate-bounce-subtle" style={{animationDelay: '1s'}}>
+              <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 animate-bounce-subtle" style={{ animationDelay: '1s' }}>
                 <Users className="w-6 h-6 text-white" />
               </div>
               <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors duration-300">Requisitos</h4>
@@ -399,7 +401,7 @@ const GobiernoSection = () => (
 
             {/* Funciones */}
             <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-6 border border-purple-100 hover-lift hover-glow transition-all duration-500 group animate-fade-in-right stagger-3">
-              <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 animate-bounce-subtle" style={{animationDelay: '2s'}}>
+              <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 animate-bounce-subtle" style={{ animationDelay: '2s' }}>
                 <Shield className="w-6 h-6 text-white" />
               </div>
               <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors duration-300">Funciones</h4>
@@ -412,7 +414,7 @@ const GobiernoSection = () => (
 
             {/* Funciones */}
             <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-6 border border-purple-100 hover-lift hover-glow transition-all duration-500 group animate-fade-in-right stagger-3">
-              <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 animate-bounce-subtle" style={{animationDelay: '2s'}}>
+              <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 animate-bounce-subtle" style={{ animationDelay: '2s' }}>
                 <Shield className="w-6 h-6 text-white" />
               </div>
               <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors duration-300">Funciones</h4>
@@ -431,7 +433,7 @@ const GobiernoSection = () => (
       <div>
         <h3 className="text-3xl font-bold text-center text-gray-900 mb-12 animate-fade-in-up">Órganos del Estado</h3>
         <div className="grid lg:grid-cols-3 gap-8">
-          
+
           {/* Poder Ejecutivo */}
           <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover-lift hover-glow transition-all duration-500 group animate-fade-in-left stagger-1">
             <div className="text-center mb-6">
@@ -455,7 +457,7 @@ const GobiernoSection = () => (
           {/* Poder Legislativo */}
           <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover-lift hover-glow transition-all duration-500 group animate-fade-in-up stagger-2">
             <div className="text-center mb-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-500 animate-float" style={{animationDelay: '1s'}}>
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-500 animate-float" style={{ animationDelay: '1s' }}>
                 <FileText className="w-10 h-10 text-white" />
               </div>
               <h4 className="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">Poder Legislativo</h4>
@@ -475,7 +477,7 @@ const GobiernoSection = () => (
           {/* Poder Judicial */}
           <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover-lift hover-glow transition-all duration-500 group animate-fade-in-right stagger-3">
             <div className="text-center mb-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-500 animate-float" style={{animationDelay: '2s'}}>
+              <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-500 animate-float" style={{ animationDelay: '2s' }}>
                 <Scale className="w-10 h-10 text-white" />
               </div>
               <h4 className="text-2xl font-bold text-gray-900 group-hover:text-green-600 transition-colors duration-300">Poder Judicial</h4>
@@ -501,7 +503,7 @@ const GobiernoSection = () => (
 const NacionalidadEconomiaSection = () => (
   <section className="py-20 bg-white parallax-bg">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
+
       {/* Nacionalidad con animaciones dinámicas */}
       <div className="mb-20">
         <div className="text-center mb-12">
@@ -512,7 +514,7 @@ const NacionalidadEconomiaSection = () => (
           <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fade-in-up stagger-2">Nacionalidad</h2>
           <p className="text-xl text-gray-600 animate-fade-in-up stagger-3">Formas de adquisición y pérdida de la nacionalidad veridiana</p>
         </div>
-        
+
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Adquisición con efectos interactivos */}
           <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 border border-green-100 hover-lift hover-glow transition-all duration-700 group animate-fade-in-left stagger-1">
@@ -530,13 +532,13 @@ const NacionalidadEconomiaSection = () => (
                 <span className="text-gray-700 group-item-hover:text-gray-900 group-item-hover:font-semibold transition-all duration-300">Por nacimiento en territorio veridiano</span>
               </div>
               <div className="flex items-start group-item hover:bg-green-100 rounded-lg p-3 transition-all duration-300 transform hover:translate-x-2">
-                <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0 animate-pulse-subtle" style={{animationDelay: '0.5s'}}>
+                <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0 animate-pulse-subtle" style={{ animationDelay: '0.5s' }}>
                   <CheckCircle className="w-3 h-3 text-white" />
                 </div>
                 <span className="text-gray-700 group-item-hover:text-gray-900 group-item-hover:font-semibold transition-all duration-300">Por filiación de padre o madre veridianos</span>
               </div>
               <div className="flex items-start group-item hover:bg-green-100 rounded-lg p-3 transition-all duration-300 transform hover:translate-x-2">
-                <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0 animate-pulse-subtle" style={{animationDelay: '1s'}}>
+                <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0 animate-pulse-subtle" style={{ animationDelay: '1s' }}>
                   <CheckCircle className="w-3 h-3 text-white" />
                 </div>
                 <span className="text-gray-700 group-item-hover:text-gray-900 group-item-hover:font-semibold transition-all duration-300">Por naturalización tras 5 años de residencia legal</span>
@@ -547,7 +549,7 @@ const NacionalidadEconomiaSection = () => (
           {/* Pérdida con efectos interactivos */}
           <div className="bg-gradient-to-br from-red-50 to-rose-50 rounded-3xl p-8 border border-red-100 hover-lift hover-glow transition-all duration-700 group animate-fade-in-right stagger-2">
             <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-rose-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 animate-float" style={{animationDelay: '1s'}}>
+              <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-rose-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 animate-float" style={{ animationDelay: '1s' }}>
                 <ExternalLink className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 group-hover:text-red-600 transition-colors duration-300">Pérdida</h3>
@@ -560,7 +562,7 @@ const NacionalidadEconomiaSection = () => (
                 <span className="text-gray-700 group-item-hover:text-gray-900 group-item-hover:font-semibold transition-all duration-300">Renuncia voluntaria</span>
               </div>
               <div className="flex items-start group-item hover:bg-red-100 rounded-lg p-3 transition-all duration-300 transform hover:translate-x-2">
-                <div className="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0 animate-pulse-subtle" style={{animationDelay: '0.5s'}}>
+                <div className="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0 animate-pulse-subtle" style={{ animationDelay: '0.5s' }}>
                   <ExternalLink className="w-3 h-3 text-white" />
                 </div>
                 <span className="text-gray-700 group-item-hover:text-gray-900 group-item-hover:font-semibold transition-all duration-300">Actos comprobados de traición a la República</span>
@@ -579,17 +581,17 @@ const NacionalidadEconomiaSection = () => (
           </div>
           <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fade-in-up stagger-2">Modelo de Economía Local</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in-up stagger-3">
-            Economía mixta que combina iniciativa privada con regulación estatal, 
+            Economía mixta que combina iniciativa privada con regulación estatal,
             incentivando la innovación y protegiendo la producción nacional.
           </p>
         </div>
-        
+
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Agricultura con animaciones súper cool */}
           <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 border border-green-100 hover-lift hover-glow transition-all duration-700 group hover:-translate-y-3 animate-fade-in-left stagger-1">
             <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 animate-float">
               <svg className="w-8 h-8 text-white transition-all duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m11-11v4m-2-2h4m-2 8v4m-2-2h4"/>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m11-11v4m-2-2h4m-2 8v4m-2-2h4" />
               </svg>
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-green-700 transition-colors duration-300">Agricultura</h3>
@@ -599,11 +601,11 @@ const NacionalidadEconomiaSection = () => (
                 <span className="group-item-hover:text-green-700 group-item-hover:font-semibold transition-all duration-300">Café de alta calidad</span>
               </li>
               <li className="flex items-center hover:translate-x-2 transition-transform duration-300 group-item">
-                <div className="w-2 h-2 bg-green-600 rounded-full mr-3 animate-pulse-subtle" style={{animationDelay: '0.5s'}}></div>
+                <div className="w-2 h-2 bg-green-600 rounded-full mr-3 animate-pulse-subtle" style={{ animationDelay: '0.5s' }}></div>
                 <span className="group-item-hover:text-green-700 group-item-hover:font-semibold transition-all duration-300">Cacao orgánico</span>
               </li>
               <li className="flex items-center hover:translate-x-2 transition-transform duration-300 group-item">
-                <div className="w-2 h-2 bg-green-600 rounded-full mr-3 animate-pulse-subtle" style={{animationDelay: '1s'}}></div>
+                <div className="w-2 h-2 bg-green-600 rounded-full mr-3 animate-pulse-subtle" style={{ animationDelay: '1s' }}></div>
                 <span className="group-item-hover:text-green-700 group-item-hover:font-semibold transition-all duration-300">Frutas tropicales</span>
               </li>
             </ul>
@@ -611,9 +613,9 @@ const NacionalidadEconomiaSection = () => (
 
           {/* Industria con efectos súper dinámicos */}
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 border border-blue-100 hover-lift hover-glow transition-all duration-700 group hover:-translate-y-3 animate-fade-in-up stagger-2">
-            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 animate-float" style={{animationDelay: '1s'}}>
+            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 animate-float" style={{ animationDelay: '1s' }}>
               <svg className="w-8 h-8 text-white transition-all duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
               </svg>
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-700 transition-colors duration-300">Industria</h3>
@@ -623,11 +625,11 @@ const NacionalidadEconomiaSection = () => (
                 <span className="group-item-hover:text-blue-700 group-item-hover:font-semibold transition-all duration-300">Sector textil</span>
               </li>
               <li className="flex items-center hover:translate-x-2 transition-transform duration-300 group-item">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 animate-pulse-subtle" style={{animationDelay: '0.5s'}}></div>
+                <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 animate-pulse-subtle" style={{ animationDelay: '0.5s' }}></div>
                 <span className="group-item-hover:text-blue-700 group-item-hover:font-semibold transition-all duration-300">Tecnología avanzada</span>
               </li>
               <li className="flex items-center hover:translate-x-2 transition-transform duration-300 group-item">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 animate-pulse-subtle" style={{animationDelay: '1s'}}></div>
+                <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 animate-pulse-subtle" style={{ animationDelay: '1s' }}></div>
                 <span className="group-item-hover:text-blue-700 group-item-hover:font-semibold transition-all duration-300">Energías renovables</span>
               </li>
             </ul>
@@ -635,7 +637,7 @@ const NacionalidadEconomiaSection = () => (
 
           {/* Servicios con efectos súper interactivos */}
           <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-3xl p-8 border border-purple-100 hover-lift hover-glow transition-all duration-700 group hover:-translate-y-3 animate-fade-in-right stagger-3">
-            <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-violet-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 animate-float" style={{animationDelay: '2s'}}>
+            <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-violet-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 animate-float" style={{ animationDelay: '2s' }}>
               <Briefcase className="w-8 h-8 text-white transition-all duration-300 group-hover:rotate-12" />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-700 transition-colors duration-300">Servicios</h3>
@@ -645,11 +647,11 @@ const NacionalidadEconomiaSection = () => (
                 <span className="group-item-hover:text-purple-700 group-item-hover:font-semibold transition-all duration-300">Turismo ecológico</span>
               </li>
               <li className="flex items-center hover:translate-x-2 transition-transform duration-300 group-item">
-                <div className="w-2 h-2 bg-purple-600 rounded-full mr-3 animate-pulse-subtle" style={{animationDelay: '0.5s'}}></div>
+                <div className="w-2 h-2 bg-purple-600 rounded-full mr-3 animate-pulse-subtle" style={{ animationDelay: '0.5s' }}></div>
                 <span className="group-item-hover:text-purple-700 group-item-hover:font-semibold transition-all duration-300">Finanzas digitales</span>
               </li>
               <li className="flex items-center hover:translate-x-2 transition-transform duration-300 group-item">
-                <div className="w-2 h-2 bg-purple-600 rounded-full mr-3 animate-pulse-subtle" style={{animationDelay: '1s'}}></div>
+                <div className="w-2 h-2 bg-purple-600 rounded-full mr-3 animate-pulse-subtle" style={{ animationDelay: '1s' }}></div>
                 <span className="group-item-hover:text-purple-700 group-item-hover:font-semibold transition-all duration-300">Servicios innovadores</span>
               </li>
             </ul>
@@ -672,28 +674,28 @@ const ProcesoJuridicoSection = () => (
         <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fade-in-up stagger-2">Proceso Jurídico</h2>
         <p className="text-xl text-gray-600 animate-fade-in-up stagger-3">Registro de Empresa en Veridia</p>
       </div>
-      
+
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 lg:p-12 text-white relative overflow-hidden hover-lift animate-fade-in-up stagger-1">
         {/* Elementos animados de fondo mejorados */}
         <div className="absolute top-0 left-0 w-full h-full opacity-10">
           <div className="absolute top-20 left-10 w-32 h-32 bg-white/20 rounded-full animate-float"></div>
-          <div className="absolute bottom-10 right-20 w-24 h-24 bg-white/15 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
-          <div className="absolute top-40 right-10 w-16 h-16 bg-white/25 rounded-full animate-float" style={{animationDelay: '4s'}}></div>
-          <div className="absolute bottom-40 left-20 w-20 h-20 bg-white/10 rounded-full animate-float" style={{animationDelay: '3s'}}></div>
+          <div className="absolute bottom-10 right-20 w-24 h-24 bg-white/15 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-40 right-10 w-16 h-16 bg-white/25 rounded-full animate-float" style={{ animationDelay: '4s' }}></div>
+          <div className="absolute bottom-40 left-20 w-20 h-20 bg-white/10 rounded-full animate-float" style={{ animationDelay: '3s' }}></div>
         </div>
-        
+
         <div className="max-w-4xl mx-auto relative z-10">
           <div className="flex items-center justify-center mb-8">
             <div className="relative group animate-fade-in-scale">
               <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center transition-all duration-700 group-hover:scale-125 group-hover:rotate-6 group-hover:bg-white/30 animate-pulse-glow">
                 <Briefcase className="w-10 h-10 text-white transition-all duration-500 group-hover:scale-110 animate-bounce-subtle" />
               </div>
-              <div className="absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full animate-bounce" style={{animationDelay: '0.5s'}}></div>
-              <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-green-400 rounded-full animate-bounce" style={{animationDelay: '1.5s'}}></div>
-              <div className="absolute top-1/2 -right-4 w-2 h-2 bg-pink-400 rounded-full animate-pulse" style={{animationDelay: '2.5s'}}></div>
+              <div className="absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full animate-bounce" style={{ animationDelay: '0.5s' }}></div>
+              <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-green-400 rounded-full animate-bounce" style={{ animationDelay: '1.5s' }}></div>
+              <div className="absolute top-1/2 -right-4 w-2 h-2 bg-pink-400 rounded-full animate-pulse" style={{ animationDelay: '2.5s' }}></div>
             </div>
           </div>
-          
+
           <div className="grid md:grid-cols-5 gap-6">
             {[
               { step: 1, title: "Solicitud", description: "Presentar solicitud en el Registro Nacional de Comercio", gradient: "from-red-400 to-pink-500", delay: "0.1s" },
@@ -702,7 +704,7 @@ const ProcesoJuridicoSection = () => (
               { step: 4, title: "Aprobación", description: "Aprobación oficial en máximo 7 días hábiles", gradient: "from-green-400 to-emerald-500", delay: "0.4s" },
               { step: 5, title: "Publicación", description: "Publicación en el Diario Oficial", gradient: "from-blue-400 to-indigo-500", delay: "0.5s" }
             ].map((item) => (
-              <div key={item.step} className={`text-center group animate-fade-in-up`} style={{animationDelay: item.delay}}>
+              <div key={item.step} className={`text-center group animate-fade-in-up`} style={{ animationDelay: item.delay }}>
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-white text-blue-600 rounded-full flex items-center justify-center font-bold text-lg mx-auto transition-all duration-700 group-hover:scale-125 group-hover:shadow-2xl transform hover:-translate-y-3 animate-bounce-subtle">
                     {item.step}
@@ -715,7 +717,7 @@ const ProcesoJuridicoSection = () => (
                   <div className="absolute -inset-6 rounded-full border-2 border-white/20 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"></div>
                   <div className="absolute -inset-8 rounded-full border border-white/10 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-1000"></div>
                 </div>
-                
+
                 <div>
                   <h4 className="font-bold mb-3 text-lg group-hover:text-yellow-200 transition-all duration-500 group-hover:scale-105">{item.title}</h4>
                   <p className="text-blue-100 text-sm leading-relaxed group-hover:text-white transition-all duration-500 group-hover:scale-105">{item.description}</p>
@@ -723,8 +725,8 @@ const ProcesoJuridicoSection = () => (
               </div>
             ))}
           </div>
-          
-          <div className="mt-12 text-center animate-fade-in-up" style={{animationDelay: '0.8s'}}>
+
+          <div className="mt-12 text-center animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/30 rounded-2xl px-6 py-3 hover:bg-white/20 hover-lift hover-glow transition-all duration-500 group cursor-pointer animate-pulse-glow">
               <Zap className="w-5 h-5 mr-3 text-yellow-300 group-hover:animate-spin transition-all duration-500 group-hover:text-yellow-200" />
               <span className="font-semibold text-white group-hover:text-yellow-200 transition-all duration-500">Proceso Completamente Digital</span>
@@ -743,10 +745,10 @@ const Footer = () => (
     {/* Elementos de fondo animados */}
     <div className="absolute inset-0 opacity-5">
       <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500 rounded-full animate-float"></div>
-      <div className="absolute bottom-20 right-20 w-24 h-24 bg-purple-500 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
-      <div className="absolute top-40 right-40 w-16 h-16 bg-green-500 rounded-full animate-float" style={{animationDelay: '4s'}}></div>
+      <div className="absolute bottom-20 right-20 w-24 h-24 bg-purple-500 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-40 right-40 w-16 h-16 bg-green-500 rounded-full animate-float" style={{ animationDelay: '4s' }}></div>
     </div>
-    
+
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div className="grid lg:grid-cols-4 gap-8">
         <div className="lg:col-span-2 animate-fade-in-left">
@@ -762,7 +764,7 @@ const Footer = () => (
             </div>
           </div>
           <p className="text-gray-300 leading-relaxed max-w-lg mb-6 hover:text-gray-200 transition-colors duration-300">
-            Sistema presidencial republicano comprometido con la transparencia, la justicia social 
+            Sistema presidencial republicano comprometido con la transparencia, la justicia social
             y el desarrollo sostenible de nuestros 8.9 millones de ciudadanos.
           </p>
           <div className="flex items-center space-x-4">
@@ -856,15 +858,11 @@ const App = () => {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-4 animate-fade-in-left" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <div className="relative group cursor-pointer">
-                <div className="w-12 h-12 bg-gradient-to-br from-emerald-400 via-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg transition-all duration-500 group-hover:scale-125 group-hover:rotate-12 group-hover:shadow-2xl animate-pulse-glow">
-                  <Building2 className="w-7 h-7 text-white group-hover:scale-110 transition-transform duration-300" />
-                </div>
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-white animate-bounce group-hover:bg-yellow-400 transition-colors duration-300"></div>
-                <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-blue-400 rounded-full border border-white opacity-0 group-hover:opacity-100 animate-pulse transition-all duration-500"></div>
+                <img src="/public/Logo.png" alt="Logo de Veridia" className="w-12 h-12 rounded-xl shadow-lg border-2 border-blue-200 bg-white object-cover transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-2xl" />
               </div>
               <div className="group cursor-pointer">
                 <h1 className="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 group-hover:from-purple-600 group-hover:to-pink-600 transition-all duration-500 select-none">
-                  REPÚBLICA DE VERIDIA
+                  REPÚBLICA
                 </h1>
                 <p className="text-sm text-gray-500 font-medium group-hover:text-blue-600 transition-colors duration-300 select-none">Portal Gubernamental Oficial</p>
               </div>
@@ -880,22 +878,22 @@ const App = () => {
             {/* Navbar desktop */}
             <nav className="hidden lg:flex space-x-8 animate-fade-in-up">
               <div className="relative group">
-                <a href="#inicio" onClick={e => {e.preventDefault(); handleNavClick('#inicio')}} className="text-gray-600 hover:text-blue-600 font-semibold transition-colors duration-200 relative group cursor-pointer">Inicio
+                <a href="#inicio" onClick={e => { e.preventDefault(); handleNavClick('#inicio') }} className="text-gray-600 hover:text-blue-600 font-semibold transition-colors duration-200 relative group cursor-pointer">Inicio
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               </div>
               <div className="relative group">
-                <a href="#datos-principales" onClick={e => {e.preventDefault(); handleNavClick('#datos-principales')}} className="text-gray-600 hover:text-green-600 font-semibold transition-colors duration-200 relative group cursor-pointer">Datos Principales
+                <a href="#datos-principales" onClick={e => { e.preventDefault(); handleNavClick('#datos-principales') }} className="text-gray-600 hover:text-green-600 font-semibold transition-colors duration-200 relative group cursor-pointer">Datos Principales
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-600 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               </div>
               <div className="relative group">
-                <a href="#marco-juridico" onClick={e => {e.preventDefault(); handleNavClick('#marco-juridico')}} className="text-gray-600 hover:text-purple-600 font-semibold transition-colors duration-200 relative group cursor-pointer">Marco Jurídico
+                <a href="#marco-juridico" onClick={e => { e.preventDefault(); handleNavClick('#marco-juridico') }} className="text-gray-600 hover:text-purple-600 font-semibold transition-colors duration-200 relative group cursor-pointer">Marco Jurídico
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               </div>
               <div className="relative group">
-                <a href="#gobierno" onClick={e => {e.preventDefault(); handleNavClick('#gobierno')}} className="text-gray-600 hover:text-red-600 font-semibold transition-colors duration-200 relative group cursor-pointer">Gobierno
+                <a href="#gobierno" onClick={e => { e.preventDefault(); handleNavClick('#gobierno') }} className="text-gray-600 hover:text-red-600 font-semibold transition-colors duration-200 relative group cursor-pointer">Gobierno
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               </div>
@@ -905,10 +903,10 @@ const App = () => {
           {mobileMenuOpen && (
             <div className="lg:hidden animate-fade-in-down bg-white shadow-xl rounded-xl mt-2 p-4 absolute left-0 right-0 z-50">
               <div className="flex flex-col space-y-4">
-                <a href="#inicio" onClick={e => {e.preventDefault(); handleNavClick('#inicio')}} className="text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-200">Inicio</a>
-                <a href="#datos-principales" onClick={e => {e.preventDefault(); handleNavClick('#datos-principales')}} className="text-gray-700 hover:text-green-600 font-semibold transition-colors duration-200">Datos Principales</a>
-                <a href="#marco-juridico" onClick={e => {e.preventDefault(); handleNavClick('#marco-juridico')}} className="text-gray-700 hover:text-purple-600 font-semibold transition-colors duration-200">Marco Jurídico</a>
-                <a href="#gobierno" onClick={e => {e.preventDefault(); handleNavClick('#gobierno')}} className="text-gray-700 hover:text-red-600 font-semibold transition-colors duration-200">Gobierno</a>
+                <a href="#inicio" onClick={e => { e.preventDefault(); handleNavClick('#inicio') }} className="text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-200">Inicio</a>
+                <a href="#datos-principales" onClick={e => { e.preventDefault(); handleNavClick('#datos-principales') }} className="text-gray-700 hover:text-green-600 font-semibold transition-colors duration-200">Datos Principales</a>
+                <a href="#marco-juridico" onClick={e => { e.preventDefault(); handleNavClick('#marco-juridico') }} className="text-gray-700 hover:text-purple-600 font-semibold transition-colors duration-200">Marco Jurídico</a>
+                <a href="#gobierno" onClick={e => { e.preventDefault(); handleNavClick('#gobierno') }} className="text-gray-700 hover:text-red-600 font-semibold transition-colors duration-200">Gobierno</a>
               </div>
             </div>
           )}
@@ -921,7 +919,7 @@ const App = () => {
       <NacionalidadEconomiaSection />
       <ProcesoJuridicoSection />
       <Footer />
-      
+
       {/* Botón Scroll to Top súper interactivo */}
       <ScrollToTop />
     </div>
@@ -1139,7 +1137,7 @@ document.addEventListener('DOMContentLoaded', () => {
   sections.forEach(section => {
     observer.observe(section)
   })
-  
+
   // Observar cards y elementos importantes
   const cards = document.querySelectorAll('.bg-white\\/10, .bg-white, .rounded-3xl, .rounded-2xl')
   cards.forEach((card, index) => {
@@ -1149,7 +1147,7 @@ document.addEventListener('DOMContentLoaded', () => {
       card.classList.add('animate-fade-in-scale')
     }, index * 100)
   })
-  
+
   // Efecto de escritura para el título principal
   const mainTitle = document.querySelector('h1')
   if (mainTitle) {
@@ -1165,7 +1163,7 @@ let ticking = false
 
 function updateParallax() {
   const scrollTop = window.pageYOffset
-  
+
   // Parallax para elementos de fondo
   const parallaxElements = document.querySelectorAll('.parallax') as NodeListOf<HTMLElement>
   parallaxElements.forEach(element => {
@@ -1173,7 +1171,7 @@ function updateParallax() {
     const yPos = -(scrollTop * speed)
     element.style.transform = `translateY(${yPos}px)`
   })
-  
+
   ticking = false
 }
 
