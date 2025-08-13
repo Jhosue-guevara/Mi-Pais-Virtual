@@ -362,15 +362,23 @@ const GobiernoSection = () => (
       {/* Presidencialismo con animaciones */}
       <div className="mb-20">
         <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-100 hover-lift hover-glow animate-fade-in-up stagger-1">
-          <div className="flex items-start lg:items-center mb-8">
-            <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-pink-600 rounded-3xl flex items-center justify-center mr-6 flex-shrink-0 animate-float">
-              <Building2 className="w-10 h-10 text-white" />
-            </div>
-            <div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">Presidencialismo en Veridia</h3>
-              <p className="text-lg text-gray-700">El Presidente es Jefe de Estado y de Gobierno</p>
-            </div>
-          </div>
+          <div className="flex flex-col sm:flex-row items-center sm:items-start lg:items-center mb-8">
+  {/* Icono */}
+  <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-pink-600 rounded-3xl flex items-center justify-center mr-0 sm:mr-6 mb-4 sm:mb-0 flex-shrink-0 animate-float">
+    <Building2 className="w-10 h-10 text-white" />
+  </div>
+
+  {/* Texto */}
+  <div className="flex-1">
+    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 leading-tight">
+      Presidencialismo en Veridia
+    </h3>
+    <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+      El Presidente es Jefe de Estado y de Gobierno
+    </p>
+  </div>
+</div>
+
 
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Elección */}
