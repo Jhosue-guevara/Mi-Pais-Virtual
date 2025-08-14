@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
 import './style.css'
+import { MapaVeridia } from './components/MapaVeridia'
+import './components/styles/MapaVeridia.css'
 import {
   Building2,
   Users,
@@ -931,6 +933,20 @@ const App = () => {
       <GobiernoSection />
       <NacionalidadEconomiaSection />
       <ProcesoJuridicoSection />
+      {/* Sección del Mapa */}
+      <section className="py-20 bg-gray-50" id="mapa-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full mb-6 hover-lift animate-fade-in-scale">
+              <Map className="w-5 h-5 mr-2" />
+              <span className="font-semibold">Territorio Nacional</span>
+            </div>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Mapa de Veridia</h2>
+            <p className="text-xl text-gray-600">Explora las regiones que conforman nuestra nación</p>
+          </div>
+          <MapaVeridia />
+        </div>
+      </section>
       <Footer />
 
       {/* Botón Scroll to Top súper interactivo */}
