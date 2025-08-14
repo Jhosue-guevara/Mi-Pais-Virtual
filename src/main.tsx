@@ -155,7 +155,7 @@ const HeroSection = () => (
             </div>
             <h3 className="text-lg font-bold text-white">División</h3>
           </div>
-          <p className="text-2xl font-black text-white mb-1">12 Departamentos</p>
+          <p className="text-2xl font-black text-white mb-1">11 Departamentos</p>
           <p className="text-blue-200 text-sm">145 municipios</p>
         </div>
       </div>
